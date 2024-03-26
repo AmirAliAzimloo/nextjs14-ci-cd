@@ -31,17 +31,17 @@ jobs:
       - name: Build application
         run: npm run build
 
-      # - name: Push to Legacy Branch
-        # run: |
-        #   git checkout legacy
-        #   git merge dev --no-edit
-        #   git push origin legacy
+      - name: Push to Legacy Branch
+        run: |
+          git checkout legacy
+          git merge dev --no-edit
+          git push origin legacy
 
       - name: Deploy to development environment
         run: |
           # Add your deployment script here
           echo "Deployment to development environment"
-          git push origin dev:legacy # Push changes from dev to legacy branch
+          # git push origin dev:legacy # Push changes from dev to legacy branch
   
   testing:
     name: Testing Stage
