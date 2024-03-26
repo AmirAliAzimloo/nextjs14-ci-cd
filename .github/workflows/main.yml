@@ -10,7 +10,7 @@ on:
 jobs:
   development:
     name: Development Stage
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
 
     steps:
