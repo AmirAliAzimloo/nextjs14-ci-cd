@@ -59,9 +59,9 @@ jobs:
       #   run: npm run test:integration
 
       - name: Deploy to testing environment
-        run: |
+        run: git push origin legacy 
           # Add your deployment script here
-          echo "Deployment to testing environment"
+          # echo "Deployment to testing environment"
 
   production:
     name: Production Stage
