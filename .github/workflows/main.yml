@@ -31,11 +31,11 @@ jobs:
       - name: Build application
         run: npm run build
 
-      - name: Push to Legacy Branch
-        run: |
-          git checkout legacy
-          git merge dev --no-edit
-          git push origin legacy
+      # - name: Push to Legacy Branch
+      #   run: |
+      #     git checkout legacy
+      #     git merge dev --no-edit
+      #     git push origin legacy
 
       - name: Deploy to development environment
         run: |
@@ -45,7 +45,7 @@ jobs:
   
   testing:
     name: Testing Stage
-    if: github.ref == 'refs/heads/legacy'
+    if: github.ref == 'refs/heads/legacy' && success()
     runs-on: ubuntu-latest
 
     needs: development
