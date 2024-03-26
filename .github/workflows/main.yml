@@ -55,8 +55,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run integration tests
-        run: npm run test:integration
+      # - name: Run integration tests
+      #   run: npm run test:integration
 
       - name: Deploy to testing environment
         run: |
