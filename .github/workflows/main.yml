@@ -31,13 +31,13 @@ jobs:
       - name: Build application
         run: npm run build
 
-      - name: Push to Legacy Branch
-        run: |
-          git checkout legacy
-          git merge dev --no-edit
-          git push origin legacy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Push to Legacy Branch
+      #   run: |
+      #     git checkout legacy
+      #     git merge dev --no-edit
+      #     git push origin legacy
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to development environment
         run: |
